@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/npo-ptnk.ru-v2/$1" }
+  ]
+}
