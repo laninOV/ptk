@@ -73,7 +73,9 @@ onReady(() => {
 
     const updateCounter = () => {
       if (!(counter instanceof HTMLElement)) return;
-      counter.textContent = slides.length ? `${index + 1} / ${slides.length}` : '';
+      const nextText = slides.length ? `Слайд ${index + 1} из ${slides.length}` : '';
+      if (counter.textContent === nextText) return;
+      counter.textContent = nextText;
     };
 
     const scrollToIndex = (nextIndex) => {
